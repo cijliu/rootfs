@@ -87,6 +87,7 @@ insert_ko()
 
 	insmod sys_config.ko chip=$CHIP_TYPE sensors=$SNS_TYPE0 g_cmos_yuv_flag=$YUV_TYPE0 board=$BOARD
 	insmod hi_osal.ko anony=1 mmz_allocator=hisi mmz=anonymous,0,$mmz_start,$mmz_size || report_error
+	insmod hi3516ev200_adc.ko
 	insmod hi3516ev200_base.ko
 	insmod hi3516ev200_sys.ko
 	insmod hi3516ev200_tde.ko
@@ -96,7 +97,7 @@ insert_ko()
 	insert_isp;
 	insmod hi3516ev200_vpss.ko
 	insmod hi3516ev200_vo.ko
-	insmod hifb.ko video="hifb:vram0_size:1620"     # default fb0:D1
+	#insmod hifb.ko video="hifb:vram0_size:1620"     # default fb0:D1
 	insmod hi3516ev200_chnl.ko
 	insmod hi3516ev200_vedu.ko
 	insmod hi3516ev200_rc.ko

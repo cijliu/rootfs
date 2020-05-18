@@ -19,10 +19,17 @@ do
 		$initscript
 	fi
 done
-ifconfig eth0 up
-udhcpc -i eth0 &
+hostname -F /etc/hostname
+#ifconfig eth0 up
+#udhcpc -i eth0 &
 cd /ko
+insmod g_ether.ko
 /ko/load3516ev200 -i -sensor imx307
 mkdir -p /root/app
-mount -t tmpfs -o size=5M app /root/app
-tar zxf /root/app.tgz -C /root/app/
+#mount -t tmpfs -o size=5M app /root/app
+#tar zxf /root/app.tgz -C /root/app/
+/bin/stupid-ftpd
+telnetd
+ifconfig usb0 192.168.137.25 up
+route add default gw 192.168.137.1
+/bin/mDNS --config /etc/config.hcl >/dev/null 2>&1 &
