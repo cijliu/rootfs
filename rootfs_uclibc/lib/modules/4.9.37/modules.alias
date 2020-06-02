@@ -1,0 +1,6 @@
+alias of:N*T*Cilitek,ili9341 fb_ili9341
+alias of:N*T*Cilitek,ili9341C* fb_ili9341
+alias spi:fb_ili9341 fb_ili9341
+alias platform:fb_ili9341 fb_ili9341
+alias spi:ili9341 fb_ili9341
+alias platform:ili9341 fb_ili9341
