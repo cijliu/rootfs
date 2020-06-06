@@ -32,4 +32,10 @@ mkdir -p /root/app
 telnetd
 ifconfig usb0 192.168.137.25 up
 route add default gw 192.168.137.1
+sed -i "5c bind_address = \"192.168.137.25\"" /etc/config.hcl
 /bin/mDNS --config /etc/config.hcl >/dev/null 2>&1 &
+/root/display.sh 
+cat /root/rgb.565 >/dev/fb0 
+cd /root
+/root/wifi.sh 
+/root/dopi_rtsp 
