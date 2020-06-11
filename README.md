@@ -5,9 +5,9 @@ DOPI使用的rootfs文件系统
 > mkdir -p ./rootfs_uclibc/dev  
 > mkdir -p ./rootfs_uclibc/sys
 
-根据flash类型进行选择编译，flash为nand时
+根据flash类型进行选择编译，flash为nand时，以开发板使用的flash为例,参数如下:
 
-> ./mkyaffs2image100 ./rootfs_uclibc yaffs2-rootfs.img 1 4  
+> ./mkyaffs2image100 ./rootfs_uclibc yaffs2-rootfs.img 1 2  
 
 参数说明：
 >mkyaffs2 {dir} {image} {pagesize} {ecctype}  
