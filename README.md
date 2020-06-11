@@ -1,6 +1,9 @@
 # DOPI Rootfs
 DOPI使用的rootfs文件系统
 # 编译
+创建根文件空目录（git不记录空文件夹）
+> mkdir -p ./rootfs_uclibc/dev  
+> mkdir -p ./rootfs_uclibc/sys
 
 根据flash类型进行选择编译，flash为nand时
 
