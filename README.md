@@ -3,7 +3,7 @@ DOPI使用的rootfs文件系统
 # 编译
 如果根路径下不存在dev,sys,proc文件夹，则创建（git不记录空文件夹）
 > mkdir -p ./rootfs_uclibc/dev  
-> mkdir -p ./rootfs_uclibc/sys
+> mkdir -p ./rootfs_uclibc/sys  
 > mkdir -p ./rootfs_uclibc/proc
 
 根据flash类型进行选择编译，flash为nand时，以开发板使用的flash为例,参数如下:
