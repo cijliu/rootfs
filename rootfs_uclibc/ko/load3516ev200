@@ -144,6 +144,7 @@ remove_ko()
 	rmmod hi_pwm
 	rmmod hi3516ev200_sys
 	rmmod hi3516ev200_base
+	rmmod hi3516ev200_adc
 	rmmod hi_osal
 	rmmod sys_config
 }
